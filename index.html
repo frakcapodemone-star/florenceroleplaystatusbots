@@ -3,43 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <title>Florence Roleplay Status Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <canvas id="bg"></canvas>
 
-
-  <h1>Florence Roleplay Status Page</h1>
+  <h1 class="title">Florence Roleplay Status Page</h1>
   <p class="subtitle">Monitoraggio live dei servizi Florence RP</p>
   <div class="divider"></div>
 
-
-  <div class="stats">
+  <div class="stats reveal">
     <div>🟢 Online bots: <span id="online-count">3</span></div>
     <div>🔴 Offline bots: <span id="offline-count">0</span></div>
     <div>⏱️ Uptime: <span id="uptime">99.9%</span></div>
   </div>
 
+  <div class="main-layout">
+    <div class="bots">
+      <a href="https://florenceroleplay.com/" target="_blank" class="bot-card reveal" data-tilt>
+        <div class="bot-title">🎮 Florence Roleplay</div>
+        <div class="status">🟢 Online</div>
+      </a>
 
-  <div class="bots">
-    <div class="bot-card">
-      <div class="bot-title">🎮 Florence Roleplay</div>
-      <div class="status"><span class="led"></span> 🟢 Online</div>
+      <a href="https://tts.florenceroleplay.com/" target="_blank" class="bot-card reveal" data-tilt>
+        <div class="bot-title">🔊 Florence Roleplay TTS</div>
+        <div class="status">🟢 Online</div>
+      </a>
+
+      <a href="./ai.html" class="bot-card reveal" data-tilt>
+        <div class="bot-title">🤖 Florence Roleplay AI</div>
+        <div class="status">🟢 Online</div>
+      </a>
     </div>
-    <div class="bot-card">
-      <div class="bot-title">🔊 Florence Roleplay TTS</div>
-      <div class="status"><span class="led"></span> 🟢 Online</div>
-    </div>
-    <div class="bot-card">
-      <div class="bot-title">🤖 Florence Roleplay AI</div>
-      <div class="status"><span class="led"></span> 🟢 Online</div>
+
+    <div class="right-column reveal">
+      <img src="https://cdn.discordapp.com/icons/1316129967951708233/a_9e4ada8de320871b5dc70de08e430f7d.gif?size=1024" alt="Florence Roleplay Logo" data-tilt>
+      <img src="https://cdn.discordapp.com/attachments/1100156832170909789/1415138471349325916/florence_servizi_esteri.png?ex=68dfc7a7&is=68de7627&hm=7241a73064463d9b6664a23258fdb5e56ae1210ebec9a1a53d23cd3bbcc2881d&" alt="Florence Servizi Esteri Logo" data-tilt>
     </div>
   </div>
 
-
-  <footer>
-    © 2025 Florence Roleplay · Status Monitor Bots
+  <footer class="reveal">
+    © <span id="year"></span> Florence Roleplay · Status Monitor Bots
   </footer>
 
   <script src="logic.js"></script>
